@@ -1,2 +1,2 @@
 # tsacards
-The Science Academy cards Club Website
+The Science Academy Cards Club Website
