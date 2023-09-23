@@ -1,0 +1,25 @@
+{
+  "name": "tsacards",
+  "version": "1.0.0",
+  "description": "The website for The Science Academy Playing Cards Club",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo hi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DisguisedAxolotl/tsacards.git"
+  },
+  "author": "Jasper Halkowich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DisguisedAxolotl/tsacards/issues"
+  },
+  "homepage": "https://github.com/DisguisedAxolotl/tsacards#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "pug": "^3.0.2",
+    "sqlite3": "^5.1.6"
+  }
+}
