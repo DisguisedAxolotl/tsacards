@@ -1,5 +1,18 @@
-html
+doctype html
+html(lang="en")
   head
-    title Cards Club
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Home | Cards Club
+    link(rel="stylesheet", href="/styles/main.css")
   body
-    h1 Cards Club
+    header.menubar 
+      a(href="https://tsa.cards"): div.main-logo
+        img.navlogo(src="/assets/cardsclublogo.png", alt="Spade Atom Logo")
+        h2.main-text Cards Club
+      .island-menubar 
+        a.menu-item(href="/signup") Sign Up
+        a.menu-item(href="/count") Chips
+        a.menu-item(href="/account") Stats
+      
+

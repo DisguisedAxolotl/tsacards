@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url("../assets/SF-Pro.ttf") format("truetype");
+}
+
+body {
+    margin: 0px;
+    background-color: black;
+    color: white;
+    font-family: 'SF Pro';
+}
+
+.navlogo {
+    height: 6rem;
+}
+
+.menubar {
+    display: flex;
+    flex-direction: row;
+    height: 8rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.island-menubar {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 50px;
+}
+
+.main-logo {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-self: start;
+    transition: .5s;
+}
+.main-logo:hover {
+    filter: hue-rotate(-35deg);
+}
+
+a.menu-item {
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 100%;
+    transition: .5s;
+}
+a.menu-item:hover {
+    background: linear-gradient(135deg, rgba(159,0,255,1) 0%, rgba(255,168,0,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.main-text {
+    background: linear-gradient(135deg, rgba(159,0,255,1) 0%, rgba(255,168,0,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
