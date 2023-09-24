@@ -42,7 +42,7 @@ body {
     transition: .5s;
 }
 .main-logo:hover {
-    filter: hue-rotate(-35deg);
+    filter: hue-rotate(-90deg);
 }
 
 a.menu-item {
