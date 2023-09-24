@@ -1,18 +1,19 @@
 const express = require('express');
 require('dotenv').config();
-const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const app = express();
 const port = process.env.PORT;
 const pug = require('pug');
-
-
 const dbPath = process.env.DB_PATH;
+const Database = require('better-sqlite3');
+const db = new Database(dbPath, { verbose: console.log });
+db.pragma('journal_mode = WAL');
+
+
+
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
-
-const db = new sqlite3.Database(dbPath);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
