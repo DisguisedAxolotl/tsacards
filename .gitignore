@@ -1,2 +1,6 @@
 .env
 tsacards.db
+.DS_STORE
+node_modules/
+.gitignore
+package-lock.json

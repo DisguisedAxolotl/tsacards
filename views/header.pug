@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Home | Cards Club
+    link(rel="stylesheet", href="/styles/main.css")
+    link(rel="shortcut icon", href="/assets/cardsclublogo.png", type="image/png")
+    link(rel="apple-touch-icon", href="/assets/cardsclublogo.png")
+    meta(name="description", content="The Science Academy Cards Club")
+    
+  body
+    header.menubar 
+      a(href="https://tsa.cards"): div.main-logo
+          img.navlogo(src="/assets/cardsclublogo.png", alt="Spade Atom Logo")
+          h2.main-text Cards Club
+      .island-menubar 
+          a.menu-item(href="https://tsa.cards/signup") Sign Up
+          a.menu-item(href="https://tsa.cards/count") Chips
+          a.menu-item(href="https://tsa.cards/account") Stats
+    block content
+    block foot 

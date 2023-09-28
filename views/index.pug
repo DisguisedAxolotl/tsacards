@@ -1,21 +1,9 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Home | Cards Club
-    link(rel="stylesheet", href="/styles/main.css")
-    link(rel="shortcut icon", href="/assets/cardsclublogo.png", type="image/png")
-    link(rel="apple-touch-icon", href="/assets/cardsclublogo.png")
-    
-  body
-    header.menubar 
-      a(href="https://tsa.cards"): div.main-logo
-        img.navlogo(src="/assets/cardsclublogo.png", alt="Spade Atom Logo")
-        h2.main-text Cards Club
-      .island-menubar 
-        a.menu-item(href="/signup") Sign Up
-        a.menu-item(href="/count") Chips
-        a.menu-item(href="/account") Stats
-      
+extends header
 
+block content
+  .index.radial-granient.hero 
+    .index.max-width-wrapper
+      .index.heromessage
+          b: h1.index Play Poker and Have Fun!
+          b: p.index Meetings every Thursday at lunch in Mr. Bradfield's Room - W308
+          a.button(href="/signup")  Join Today!
