@@ -30,6 +30,8 @@ CREATE TABLE IF NOT EXISTS player_meetings (
 try {
   setup.run();
   console.log('success creating db');
+} catch {
+  console.log('error creating database. Check db file exists and is able to be connected to.');
 }
 
 
