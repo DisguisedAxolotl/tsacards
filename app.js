@@ -12,23 +12,24 @@ const dbPath = process.env.DB_PATH;
 const db = require('better-sqlite3')(dbPath);
 db.pragma('journal_mode = WAL');
 
-const setup = db.prepare(`
-CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, email TEXT NOT NULL); 
-CREATE TABLE IF NOT EXISTS meetings (
+const setupA = db.prepare(`CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, email TEXT NOT NULL); `);
+const setupB = db.prepare(`CREATE TABLE IF NOT EXISTS meetings (
   id INT AUTO_INCREMENT PRIMARY KEY,
   date DATE NOT NULL,
   meeting_code VARCHAR(255) NOT NULL UNIQUE
-);
-CREATE TABLE IF NOT EXISTS player_meetings (
+);`)
+const setupC = db.prepare(`CREATE TABLE IF NOT EXISTS player_meetings (
   player_id INT,
   meeting_id INT,
   score INT NOT NULL,
   FOREIGN KEY (player_id) REFERENCES users(id),
   FOREIGN KEY (meeting_id) REFERENCES meetings(id)
-);
-`);
+);`);
+
 try {
-  setup.run();
+  setupA.run();
+  setupB.run();
+  setupC.run();
   console.log('success creating db');
 } catch {
   console.log('error creating database. Check db file exists and is able to be connected to.');
