@@ -35,11 +35,11 @@ app.post('/signup', (req, res) => {
 
   try {
     insert.run(name, email);
-    res.send('Signup successful!');
+    res.redirect('/');
   } catch (error) {
     // Handle the error
     console.error(error.message);
-    res.send('Error signing up.');
+    res.status(500).render('error', { error: error.stack })
   }
 });
 

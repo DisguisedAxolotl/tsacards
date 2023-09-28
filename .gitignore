@@ -4,3 +4,5 @@ tsacards.db
 node_modules/
 .gitignore
 package-lock.json
+tsacards.db-shm
+tsacards.db-wal
