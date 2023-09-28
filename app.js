@@ -51,6 +51,18 @@ app.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+app.get('/count', (req, res) => {
+  res.render('count');
+});
+
+app.get('/success', (req, res) => {
+  res.render('success');
+});
+
+app.get('/account', (req, res) => {
+  res.render('account');
+});
+
 app.post('/signup', (req, res) => {
   const { name, email } = req.body;
 
@@ -59,7 +71,7 @@ app.post('/signup', (req, res) => {
 
   try {
     insert.run(name, email);
-    res.redirect('/');
+    res.redirect('/success');
   } catch (error) {
     // Handle the error
     console.error(error.message);
@@ -67,9 +79,7 @@ app.post('/signup', (req, res) => {
   }
 });
 
-app.get('/count', (req, res) => {
-  res.render('count');
-});
+
 
 
 

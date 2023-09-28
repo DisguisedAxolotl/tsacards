@@ -1,0 +1,32 @@
+extends header
+block content
+    .index.radial-granient.hero 
+        .index.max-width-wrapper
+            form(action="/signup", method="post", onsubmit="return validateForm()")
+                label(for="email") @mymail Email:
+                input(type="email", name="email", id="email", required)
+                label(for="count") Number of chips
+                input(type="tel", name="count", id="count", required)
+                label(for="sessionid")  
+                input(type="submit", value="Submit")
+    
+    
+    script.
+        function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+
+        if (email.trim() === '' || email.trim() === '') {
+            alert('Name and email are required fields.');
+            return false;
+        }
+
+
+        var emailRegex = /[A-Za-z]+[0-9]+@mymail\.lausd\.net/i;
+        if (!email.match(emailRegex)) {
+        alert('Please enter a valid email address.');
+        return false;
+        }
+
+        return true; // Form will submit if validation passes
+        }
